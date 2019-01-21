@@ -6,6 +6,23 @@
         <element>adminadjust</element>
         <type>plugin</type>
         <folder>system</folder>
+        <version>1.0.1</version>
+        <client>site</client>
+        <infourl title="NPEU: plg_adminadjust">https://github.com/NPEU/plg_adminadjust/releases/tag/v1.0.1</infourl>
+        <downloads>
+            <downloadurl type="full" format="zip">https://github.com/NPEU/plg_adminadjust/archive/v1.0.1.zip</downloadurl>
+        </downloads>
+        <targetplatform name="joomla" />
+        <tags>
+            <tag>stable</tag>
+        </tags>
+    </update>
+    <update>
+        <name>NPEU: plg_adminadjust</name>
+        <description>Joomla! plg_adminadjust plugin</description>
+        <element>adminadjust</element>
+        <type>plugin</type>
+        <folder>system</folder>
         <version>1.0.2</version>
         <client>site</client>
         <infourl title="NPEU: plg_adminadjust">https://github.com/NPEU/plg_adminadjust/releases/tag/v1.0.2</infourl>
