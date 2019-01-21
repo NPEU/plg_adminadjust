@@ -3,7 +3,7 @@
  * @package     Joomla.Plugin
  * @subpackage  System.AdminAdjust
  *
- * @copyright   Copyright (C) NPE 2019.
+ * @copyright   Copyright (C) NPEU 2019.
  * @license     MIT License; see LICENSE.md
  */
 

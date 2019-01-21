@@ -6,7 +6,7 @@
     <authorEmail>andy.kirk@npeu.ox.ac.uk</authorEmail>
     <authorUrl>https://www.npeu.ox.ac.uk</authorUrl>
     <creationDate>January 2019</creationDate>
-    <copyright>(C) NPE 2019</copyright>
+    <copyright>(C) NPEU 2019</copyright>
     <license>MIT License; see LICENSE.md</license>
 
     <!--  The version string is recorded in the components table -->
@@ -16,7 +16,7 @@
 
     <updateservers>
         <!-- Note: No spaces or linebreaks allowed between the server tags -->
-        <server type="extension" name="plg_adminadjust Update Site">https://raw.githubusercontent.com/NPE/plg_adminadjust/master/update-manifest.xml</server>
+        <server type="extension" name="plg_adminadjust Update Site">https://raw.githubusercontent.com/NPEU/plg_adminadjust/master/update-manifest.xml</server>
     </updateservers>
     
     <files>
