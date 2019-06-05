@@ -22,6 +22,7 @@
     <files>
         <filename plugin="adminadjust">adminadjust.php</filename>
         <filename>index.html</filename>
+        <folder>forms</folder>
         <folder>language</folder>
     </files>
 

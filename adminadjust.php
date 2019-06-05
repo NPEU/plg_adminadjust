@@ -30,4 +30,36 @@ class plgSystemAdminAdjust extends JPlugin
         
         $document->addScript('/js/admin-adjust.js');
     }
+    
+    /**
+     * Prepare form and add my field.
+     *
+     * @param   JForm  $form  The form to be altered.
+     * @param   mixed  $data  The associated data for the form.
+     *
+     * @return  boolean
+     *
+     * @since   <your version>
+     */
+    function onContentPrepareForm($form, $data)
+    {
+        $app    = JFactory::getApplication();
+        $option = $app->input->get('option');
+        
+        #echo '<pre>'; var_dump($option); echo '</pre>';exit;
+
+        switch($option)
+        {
+            case 'com_menus' :
+                if ($app->isClient('administrator'))
+                {
+                    JForm::addFormPath(__DIR__ . '/forms');
+                    $form->loadFile('menu_item', false);
+                }
+
+                return true;
+        }
+
+        return true;
+    }
 }
