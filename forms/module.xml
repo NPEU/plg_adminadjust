@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form>
+    <fields name="params">
+        <fieldset name="basic">
+            <field
+                name="cta_text"
+                type="text"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_CTA_TEXT_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_CTA_TEXT_DESC"
+            />
+            <field
+                name="cta_url"
+                type="url"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_CTA_URL_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_CTA_URL_DESC"
+            />
+            <field
+                name="wrapper"
+                type="list"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_DESC"
+            >
+                <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_OPTION_NONE</option>
+                <option value="panel">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_OPTION_PANEL</option>
+            </field>
+            <field
+                name="theme"
+                type="list"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_DESC"
+            >
+                <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DEFALT</option>
+                <option value="dark">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DARK</option>
+            </field>
+        </fieldset>
+    </fields>
+</form>

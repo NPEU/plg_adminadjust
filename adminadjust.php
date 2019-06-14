@@ -58,6 +58,15 @@ class plgSystemAdminAdjust extends JPlugin
                 }
 
                 return true;
+                
+            case 'com_modules' :
+                if ($app->isClient('administrator'))
+                {
+                    JForm::addFormPath(__DIR__ . '/forms');
+                    $form->loadFile('module', false);
+                }
+
+                return true;
         }
 
         return true;
