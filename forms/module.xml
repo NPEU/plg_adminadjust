@@ -32,6 +32,12 @@
                 <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DEFALT</option>
                 <option value="dark">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DARK</option>
             </field>
+            <field
+                name="headline_image"
+                type="media"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_DESC"
+            />
         </fieldset>
     </fields>
 </form>

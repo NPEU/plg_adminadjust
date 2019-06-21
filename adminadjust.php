@@ -46,12 +46,10 @@ class plgSystemAdminAdjust extends JPlugin
         $app    = JFactory::getApplication();
         $option = $app->input->get('option');
         
-        #echo '<pre>'; var_dump($option); echo '</pre>';exit;
-
         switch($option)
         {
             case 'com_menus' :
-                if ($app->isClient('administrator'))
+                if ($app->isClient('administrator') && $data->type == 'component')
                 {
                     JForm::addFormPath(__DIR__ . '/forms');
                     $form->loadFile('menu_item', false);
