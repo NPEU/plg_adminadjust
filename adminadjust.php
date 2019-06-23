@@ -27,10 +27,10 @@ class plgSystemAdminAdjust extends JPlugin
         }
         $document = JFactory::getDocument();
         $document->addStyleSheet('/css/admin-adjust.css');
-        
+
         $document->addScript('/js/admin-adjust.js');
     }
-    
+
     /**
      * Prepare form and add my field.
      *
@@ -45,18 +45,18 @@ class plgSystemAdminAdjust extends JPlugin
     {
         $app    = JFactory::getApplication();
         $option = $app->input->get('option');
-        
+
         switch($option)
         {
             case 'com_menus' :
-                if ($app->isClient('administrator') && $data->type == 'component')
+                if ($app->isClient('administrator') && isset($data->type) && $data->type == 'component')
                 {
                     JForm::addFormPath(__DIR__ . '/forms');
                     $form->loadFile('menu_item', false);
                 }
 
                 return true;
-                
+
             case 'com_modules' :
                 if ($app->isClient('administrator'))
                 {
