@@ -17,6 +17,41 @@ class plgSystemAdminAdjust extends JPlugin
     protected $autoloadLanguage = true;
 
     /**
+     * Plugin that changes the language code used in the <html /> tag.
+     *
+     * @return  void
+     *
+     * @since   2.5
+     */
+    public function onAfterRender()
+    {
+        // Note this should be in it's own plugin, really.
+        $app = JFactory::getApplication();
+        // Use this plugin only in site application.
+        if ($app->isClient('site')) {
+            switch ($_SERVER['SERVER_NAME']) {
+                case 'dev.npeu.ox.ac.uk' :
+                    $env = 'development';
+                    break;
+                case 'test.npeu.ox.ac.uk':
+                    $env = 'testing';
+                    break;
+                default:
+                    $env = 'production';
+            }
+
+            // Get the response body.
+            $body = $app->getBody();
+
+            if ($env == 'development') {
+                $app->setBody(str_replace('https://www.npeu.ox.ac.uk', 'https://dev.npeu.ox.ac.uk', $body));
+            } elseif ($env == 'testing') {
+                $app->setBody(str_replace('https://www.npeu.ox.ac.uk', 'https://test.npeu.ox.ac.uk', $body));
+            }
+        }
+    }
+
+    /**
      * Add CSS and JS.
      */
     public function onBeforeRender()
