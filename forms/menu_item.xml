@@ -44,12 +44,6 @@
                         label="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_ALT_LABEL"
                         description="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_ALT_DESC"
                     />
-                    <field
-                        name="credit"
-                        type="text"
-                        label="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_CREDIT_LABEL"
-                        description="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_CREDIT_DESC"
-                    />
                 </form>
             </field>
             <field

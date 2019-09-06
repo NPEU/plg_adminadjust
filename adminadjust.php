@@ -62,7 +62,11 @@ class plgSystemAdminAdjust extends JPlugin
         }
         $document = JFactory::getDocument();
         $document->addStyleSheet('/css/admin-adjust.css');
+        #document->addStyleSheet('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.css');
 
+        
+        #$document->addScript('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.js');
+        #$document->addScript(' https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js');
         $document->addScript('/js/admin-adjust.js');
     }
 
