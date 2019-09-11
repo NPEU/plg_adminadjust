@@ -136,6 +136,7 @@
             <tag>stable</tag>
         </tags>
     </update>
+    <update>
         <name>NPEU: plg_adminadjust</name>
         <description>Joomla! plg_adminadjust plugin</description>
         <element>adminadjust</element>
