@@ -29,8 +29,12 @@
                 label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_LABEL"
                 description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_DESC"
             >
-                <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DEFALT</option>
+                <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DEFAULT</option>
+                <option value="white">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_WHITE</option>
+                <option value="very-light">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_VERY_LIGHT</option>
+                <option value="light">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_LIGHT</option>
                 <option value="dark">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_DARK</option>
+                <option value="very-dark">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_VERY_DARK</option>
             </field>
             <field
                 name="headline_image"
