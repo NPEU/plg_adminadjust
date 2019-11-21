@@ -31,6 +31,7 @@
             >
                 <option value="">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_OPTION_NONE</option>
                 <option value="panel">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_OPTION_PANEL</option>
+                <option value="panel_longform">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_OPTION_PANEL_LONGFORM</option>
             </field>
             <field
                 name="theme"
