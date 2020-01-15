@@ -51,7 +51,7 @@
                         description="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_DESC"
                     />
                     <field
-                        name="text-width"
+                        name="text_width"
                         type="number"
                         label="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_WIDTH_LABEL"
                         description="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_WIDTH_DESC"
