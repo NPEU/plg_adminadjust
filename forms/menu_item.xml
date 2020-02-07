@@ -59,6 +59,17 @@
                         max="30"
                     />
                     <field
+                        name="text_position"
+                        type="radio"
+                        label="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_POSITION_DESC"
+                        description=""
+                        default="2"
+                        class="btn-group"
+                    >
+                        <option value="1">PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_POSITION_OPTION_LEFT</option>
+                        <option value="2">PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_TEXT_POSITION_OPTION_RIGHT</option>
+                    </field>
+                    <field
                         name="cta_link"
                         type="text"
                         label="PLG_SYSTEM_ADMINADJUST_MENU_ITEM_HERO_CTA_LINK_LABEL"
