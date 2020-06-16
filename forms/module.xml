@@ -51,6 +51,7 @@
                 type="media"
                 label="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_LABEL"
                 description="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_DESC"
+                directory="images"
             />
         </fieldset>
     </fields>
