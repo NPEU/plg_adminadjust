@@ -2,7 +2,6 @@
 /*.admin {
   background: red;
 }*/
-/* line 6, admin-adjust.scss */
 #imageModal_jform_images_image_intro {
   top: 3vh;
   height: 94vh;
@@ -15,7 +14,6 @@
   flex-direction: column;
 }
 
-/* line 20, admin-adjust.scss */
 #imageModal_jform_images_image_intro.in {
   display: -webkit-box !important;
   display: -webkit-flex !important;
@@ -24,7 +22,6 @@
   display: flex !important;
 }
 
-/* line 28, admin-adjust.scss */
 #imageModal_jform_images_image_intro.in .modal-body {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -39,7 +36,6 @@
   max-height: none !important;
 }
 
-/* line 44, admin-adjust.scss */
 #imageModal_jform_images_image_intro.in .modal-body iframe {
   -webkit-box-flex: 1;
   -webkit-flex-grow: 1;
@@ -50,23 +46,20 @@
   height: 81vh !important;
 }
 
-/* line 62, admin-adjust.scss */
 .chzn-container .chzn-results {
   display: none;
 }
 
-/* line 66, admin-adjust.scss */
 .chzn-container.chzn-with-drop .chzn-results {
   display: block;
 }
 
 /* ---------------------------------------------------------------------------------------------- */
-/* line 74, admin-adjust.scss */
-a[href*="folder=avatars"],
-a[href*="folder=brand-logos"],
-a[href*="folder=icons"],
-a[href*="folder=postcards"],
-a[href*="folder=sites"] {
+a[href*="folder=images%2Favatars"],
+a[href*="folder=images%2Fbrand-logos"],
+a[href*="folder=images%2Ficons"],
+a[href*="folder=images%2Fpostcards"],
+a[href*="folder=images%2Fsites"] {
   color: #2f6f2f;
 }
 
