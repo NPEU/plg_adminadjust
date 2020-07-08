@@ -61,7 +61,7 @@ class plgSystemAdminAdjust extends JPlugin
             return; // Only run in admin
         }
         $document = JFactory::getDocument();
-        $document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.css');
+        $document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.min.css');
         #document->addStyleSheet('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.css');
 
         
