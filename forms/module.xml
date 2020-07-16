@@ -47,6 +47,15 @@
                 <option value="very-dark">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_THEME_OPTION_VERY_DARK</option>
             </field>
             <field
+                name="color"
+                type="list"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_COLOR_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_COLOR_DESC"
+            >
+                <option value="neutral">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_COLOR_OPTION_DEFAULT</option>
+                <option value="brand">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_COLOR_OPTION_BRAND</option>
+            </field>
+            <field
                 name="headline_image"
                 type="media"
                 label="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_LABEL"
