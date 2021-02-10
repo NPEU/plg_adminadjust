@@ -27,6 +27,16 @@ class plgSystemAdminAdjust extends JPlugin
     {
         // Note this should be in it's own plugin, really.
         $app = JFactory::getApplication();
+        
+        if ($app->isAdmin()) {
+            // New password fields shoudl now use 'new-password' instead of 'off' for autocomplete.
+            // Get the response body.
+            $body = $app->getBody();
+            
+            #$app->setBody(preg_replace('#(<input.*?type="password".*?)autocomplete="off"#s', '$1autocomplete="new-password"', $body));
+            $app->setBody(str_replace('autocomplete="off" class="validate-password"', 'autocomplete="new-password" class="validate-password"', $body));
+        }
+        
         // Use this plugin only in site application.
         if ($app->isClient('site')) {
             switch ($_SERVER['SERVER_NAME']) {
