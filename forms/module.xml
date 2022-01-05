@@ -3,6 +3,13 @@
     <fields name="params">
         <fieldset name="basic">
             <field
+                name="headline_image"
+                type="media"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_DESC"
+                directory="images"
+            />
+            <field
                 name="cta_text"
                 type="text"
                 label="PLG_SYSTEM_ADMINADJUST_MODULE_CTA_TEXT_LABEL"
@@ -56,12 +63,41 @@
                 <option value="brand">PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_COLOR_OPTION_BRAND</option>
             </field>
             <field
-                name="headline_image"
-                type="media"
-                label="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_LABEL"
-                description="PLG_SYSTEM_ADMINADJUST_MODULE_HEADLINE_IMAGE_DESC"
-                directory="images"
-            />
+                name="width"
+                type="list"
+                default="100"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_WIDTH_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_WIDTH_DESC"
+            >
+                <option value="100">100%</option>
+                <option value="66-666">66.666%</option>
+                <option value="50">50%</option>
+                <option value="33-333">33.333%</option>
+                <option value="25">25%</option>
+                <option value="20">20%</option>
+            </field>
+            <field
+                name="align"
+                type="list"
+                default="center"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_ALIGN_SELF_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_ALIGN_SELF_DESC"
+            >
+                <option value="start">Left</option>
+                <option value="center">Centre</option>
+                <option value="end">Right</option>
+            </field>
+            <field
+                name="bottom_border"
+                type="radio"
+                default="0"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_BORDER_BOTTOM_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_BORDER_BOTTOM_DESC"
+                class="btn-group btn-group-yesno
+            ">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
         </fieldset>
     </fields>
 </form>
