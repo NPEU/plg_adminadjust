@@ -77,6 +77,17 @@
                 <option value="20">20%</option>
             </field>
             <field
+                name="wrapper_fill_hieght"
+                type="radio"
+                default="0"
+                label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_FILL_HEIGHT_LABEL"
+                description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_FILL_HEIGHT_DESC"
+                class="btn-group btn-group-yesno
+            ">
+                <option value="1">JYES</option>
+                <option value="0">JNO</option>
+            </field>
+            <field
                 name="align"
                 type="list"
                 default="center"
