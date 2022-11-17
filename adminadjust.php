@@ -17,46 +17,30 @@ class plgSystemAdminAdjust extends JPlugin
     protected $autoloadLanguage = true;
 
     /**
-     * Plugin that changes the language code used in the <html /> tag.
-     *
-     * @return  void
-     *
-     * @since   2.5
+     * Replace strings in the body.
      */
     public function onAfterRender()
     {
         // Note this should be in it's own plugin, really.
         $app = JFactory::getApplication();
-        
+
+        // Only in admin:
         if ($app->isAdmin()) {
-            // New password fields shoudl now use 'new-password' instead of 'off' for autocomplete.
+            // New password fields should now use 'new-password' instead of 'off' for autocomplete.
             // Get the response body.
             $body = $app->getBody();
-            
+
             #$app->setBody(preg_replace('#(<input.*?type="password".*?)autocomplete="off"#s', '$1autocomplete="new-password"', $body));
             $app->setBody(str_replace('autocomplete="off" class="validate-password"', 'autocomplete="new-password" class="validate-password"', $body));
         }
-        
-        // Use this plugin only in site application.
+
+        // Only in site:
         if ($app->isClient('site')) {
-            switch ($_SERVER['SERVER_NAME']) {
-                case 'dev.npeu.ox.ac.uk' :
-                    $env = 'development';
-                    break;
-                case 'test.npeu.ox.ac.uk':
-                    $env = 'testing';
-                    break;
-                default:
-                    $env = 'production';
-            }
-
-            // Get the response body.
-            $body = $app->getBody();
-
-            if ($env == 'development') {
-                $app->setBody(str_replace('https://www.npeu.ox.ac.uk', 'https://dev.npeu.ox.ac.uk', $body));
-            } elseif ($env == 'testing') {
-                $app->setBody(str_replace('https://www.npeu.ox.ac.uk', 'https://test.npeu.ox.ac.uk', $body));
+            // Replace all absolute local URLs with the correct ones:
+            if ($_SERVER['SERVER_NAME'] != 'www.npeu.ox.ac.uk') {
+                // Get the response body.
+                $body = $app->getBody();
+                $app->setBody(str_replace('https://www.npeu.ox.ac.uk', 'https://' . $_SERVER['SERVER_NAME'], $body));
             }
         }
     }
@@ -74,7 +58,7 @@ class plgSystemAdminAdjust extends JPlugin
         $document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.min.css');
         #document->addStyleSheet('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.css');
 
-        
+
         #$document->addScript('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.js');
         #$document->addScript(' https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js');
         $document->addScript('/plugins/system/adminadjust/assets/js/admin-adjust.js');
