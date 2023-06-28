@@ -69,6 +69,7 @@
                 label="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_WIDTH_LABEL"
                 description="PLG_SYSTEM_ADMINADJUST_MODULE_WRAPPER_WIDTH_DESC"
             >
+                <option value="0">Auto</option>
                 <option value="100">100%</option>
                 <option value="66-666">66.666%</option>
                 <option value="50">50%</option>
