@@ -25,7 +25,7 @@ class plgSystemAdminAdjust extends JPlugin
         $app = JFactory::getApplication();
 
         // Only in admin:
-        if ($app->isAdmin()) {
+        if ($app->isClient('administrator')) {
             // New password fields should now use 'new-password' instead of 'off' for autocomplete.
             // Get the response body.
             $body = $app->getBody();
@@ -51,7 +51,7 @@ class plgSystemAdminAdjust extends JPlugin
     public function onBeforeRender()
     {
         $app = JFactory::getApplication();
-        if (!$app->isAdmin()) {
+        if (!$app->isClient('administrator')) {
             return; // Only run in admin
         }
         $document = JFactory::getDocument();
