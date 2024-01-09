@@ -21,9 +21,11 @@
 
     <namespace path="src">NPEU\Plugin\System\AdminAdjust</namespace>
     <files>
-        <folder>services</folder>
         <folder plugin="adminadjust">src</folder>
+        <folder>assets</folder>
+        <folder>forms</folder>
         <folder>language</folder>
+        <folder>services</folder>
     </files>
 
 </extension>
