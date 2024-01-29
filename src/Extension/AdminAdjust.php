@@ -73,7 +73,7 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
     /**
      * Replace strings in the body.
      */
-    public function onAfterRender()
+    public function onAfterRender(Event $event): void
     {
         // Note this should be in it's own plugin, really.
         $app = Factory::getApplication();
@@ -103,7 +103,7 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
     /**
      * Add CSS and JS.
      */
-    public function onBeforeRender()
+    public function onBeforeRender(Event $event): void
     {
         $app = Factory::getApplication();
         if (!$app->isClient('administrator')) {
