@@ -134,8 +134,7 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
     {
         [$form, $data] = array_values($event->getArguments());
 
-        if (!($form instanceof \Joomla\CMS\Form\Form)) {
-            throw new GenericDataException(Text::_('JERROR_NOT_A_FORM'), 500);
+        if (!$form instanceof \Joomla\CMS\Form\Form) {
             return;
         }
 
