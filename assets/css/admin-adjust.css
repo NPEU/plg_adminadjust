@@ -12,3 +12,5 @@
 html:not(:has(body.modal-open)) {
     overflow-y: scroll;
 }
+
+.joomla-dialog-media-field.loaded > dialog {height: unset !important;}
