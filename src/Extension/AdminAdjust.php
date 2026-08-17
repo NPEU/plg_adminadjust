@@ -109,12 +109,16 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
         if (!$app->isClient('administrator')) {
             return; // Only run in admin
         }
+
         $document = Factory::getDocument();
+        if ($document) {
+            $wa = $document->getWebAssetManager();
+            $wa->registerAndUseStyle('plg_adminadjust', 'plugins/system/adminadjust/assets/css/admin-adjust.css');
+        }
+
         #$document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.min.css');
-        $document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.css');
+        #$document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.css');
         #document->addStyleSheet('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.css');
-
-
         #$document->addScript('https://cdn.jsdelivr.net/npm/webui-popover@1.2.18/dist/jquery.webui-popover.min.js');
         #$document->addScript(' https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js');
         #$document->addScript('/plugins/system/adminadjust/assets/js/admin-adjust.js');
