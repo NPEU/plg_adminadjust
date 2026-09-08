@@ -113,7 +113,7 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
         $document = Factory::getDocument();
         if ($document) {
             $wa = $document->getWebAssetManager();
-            $wa->registerAndUseStyle('plg_adminadjust', 'plugins/system/adminadjust/assets/css/admin-adjust.css');
+            $wa->registerAndUseStyle('plg_adminadjust.style', 'plugins/system/adminadjust/assets/css/admin-adjust.css');
         }
 
         #$document->addStyleSheet('/plugins/system/adminadjust/assets/css/admin-adjust.min.css');
