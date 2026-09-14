@@ -144,6 +144,21 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
 
         $app    = Factory::getApplication();
         $option = $app->input->get('option');
+
+        // Force mod_custom to use CodeMirrot - it's more useful for a custom module.
+        // Ones that need a WYSIWYG should use the Text module.
+        if ($form->getName() === 'com_modules.module') {
+
+            // Fallback check to determine module type from either existing data or the URL query string
+            $moduleType = $data->module ?? \Joomla\CMS\Factory::getApplication()->getInput()->get('type', '');
+
+            // Target only Custom Modules (mod_custom)
+            if ($moduleType === 'mod_custom') {
+                // Force the XML form field attribute 'editor' to target 'codemirror' explicitly
+                $form->setFieldAttribute('content', 'editor', 'codemirror');
+            }
+        }
+
         FormHelper::addFormPath(dirname(dirname(__DIR__)) . '/forms');
 
         switch($option)
