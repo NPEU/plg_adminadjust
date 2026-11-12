@@ -14,3 +14,8 @@ html:not(:has(body.modal-open)) {
 }
 
 .joomla-dialog-media-field.loaded > dialog {height: unset !important;}
+
+/* Clear the floting codemirror F10 message: */
+joomla-editor-codemirror {
+    display: flow-root;
+}

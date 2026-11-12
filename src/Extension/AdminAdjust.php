@@ -145,9 +145,9 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
         $app    = Factory::getApplication();
         $option = $app->input->get('option');
 
-        // Force mod_custom to use CodeMirrot - it's more useful for a custom module.
-        // Ones that need a WYSIWYG should use the Text module.
-        if ($form->getName() === 'com_modules.module') {
+        // Force mod_custom to use CodeMirror - it's more useful for a custom module.
+        // Ones that need a WYSIWYG should use the NPEU Text module.
+        /*if ($form->getName() === 'com_modules.module') {
 
             // Fallback check to determine module type from either existing data or the URL query string
             $moduleType = $data->module ?? \Joomla\CMS\Factory::getApplication()->getInput()->get('type', '');
@@ -156,6 +156,65 @@ class AdminAdjust extends CMSPlugin implements SubscriberInterface
             if ($moduleType === 'mod_custom') {
                 // Force the XML form field attribute 'editor' to target 'codemirror' explicitly
                 $form->setFieldAttribute('content', 'editor', 'codemirror');
+            }
+        }*/
+
+        // Configure the content editor for selected module types.
+        if ($form->getName() === 'com_modules.module') {
+
+            // Determine module type from existing data or the URL.
+            $moduleType = $data->module
+                ?? $app->input->get('type', '');
+
+            // Standard Joomla Custom module.
+            if ($moduleType === 'mod_custom') {
+                $form->setFieldAttribute('content', 'editor', 'codemirror');
+            }
+
+            // NPEU modules that store their content in #__modules.content.
+            $npeuContentModules = [
+                'mod_svg',
+                'mod_infographic'
+                // Add your other module types here.
+            ];
+
+            if (in_array($moduleType, $npeuContentModules, true)) {
+                // These make assumption that all NPEU modules need them. If it ever becomes not the
+                // case I'll hve to move these to the specific module type blocks.
+
+                $form->setFieldAttribute('content', 'editor', 'codemirror');
+                $form->setFieldAttribute('content', 'filter', 'raw');
+                $form->setFieldAttribute('content', 'buttons', 'false');
+                $form->setFieldAttribute('content', 'required', 'true');
+
+                // Restore the module-specific label and description.
+                if ($moduleType === 'mod_svg') {
+                    $form->setFieldAttribute(
+                        'content',
+                        'label',
+                        'MOD_SVG_SVG_LABEL'
+                    );
+
+                    $form->setFieldAttribute(
+                        'content',
+                        'description',
+                        'MOD_SVG_SVG_DESC'
+                    );
+                }
+
+                if ($moduleType === 'mod_infographic') {
+                    $form->setFieldAttribute(
+                        'content',
+                        'label',
+                        'MOD_INFOGRAPHIC_MARKUP_LABEL'
+                    );
+
+                    $form->setFieldAttribute(
+                        'content',
+                        'description',
+                        'MOD_INFOGRAPHIC_MARKUP_DESC'
+                    );
+                }
             }
         }
 
